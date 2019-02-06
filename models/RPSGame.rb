@@ -6,20 +6,20 @@ class RPSGame
 
   def initialize(first_option,second_option = "Empty")
 
-    @first_option = first_option.to_s
-    @second_option = second_option.to_s if second_option
+    @first_option = first_option.to_s.downcase
+    @second_option = second_option.to_s.downcase
 
   end
 
   def decide_winner()
 
-    return "Draw" if @first_option == @second_option
-    return "Player 2 - Paper" if @first_option == "rock" && @second_option == "paper"
-    return "Player 1 - Rock" if @first_option == "rock" && @second_option == "scissors"
-    return "Player 1 - Paper" if @first_option == "paper" && @second_option == 'rock'
-    return "Player 2 - scissors" if @first_option == "paper" && @second_option == 'scissors'
-    return "Player 2 - Rock" if @first_option == "scissors" && @second_option == 'rock'
-    return "player 1 - scissors"if @first_option == "scissors" && @second_option == 'paper'
+    return "It's a Draw" if @first_option == @second_option
+    return "Player 2 - Paper Won" if @first_option == "rock" && @second_option == "paper"
+    return "Player 1 - Rock Won" if @first_option == "rock" && @second_option == "scissors"
+    return "Player 1 - Paper Won" if @first_option == "paper" && @second_option == 'rock'
+    return "Player 2 - Scissors Won" if @first_option == "paper" && @second_option == 'scissors'
+    return "Player 2 - Rock Won" if @first_option == "scissors" && @second_option == 'rock'
+    return "player 1 - Scissors Won"if @first_option == "scissors" && @second_option == 'paper'
 
   end
 
